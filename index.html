@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +17,44 @@
 </head>
 
 <body>
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h5>Логин</h5>
+          <input type="email" placeholder="text@youremail.com">
+        </div>
+        <div class="modal-content">
+          <h5>Пароль</h5>
+          <input type="password" name="" id="">
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Войти</a>
+        </div>
+      </div> 
+
+      <div id="modal2" class="modal">
+        <h2>Регистрация</h2>
+        <div class="line"></div>
+        <div class="modal-content">
+            <h5>ФИО</h5>
+            <input type="text" name="" id="">
+          </div>
+        <div class="modal-content">
+          <h5>Почта</h5>
+          <input type="email" placeholder="text@youremail.com">
+        </div>
+        <div class="modal-content">
+          <h5>Пароль</h5>
+          <input type="password" name="" id="">
+        </div>
+        <div class="modal-content">
+            <h5>Введите пароль ещё раз</h5>
+            <input type="password" name="" id="">
+          </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Зарегистрироваться</a>
+        </div>
+      </div> 
+
     <header>
         <div class="container">
             <div class="header__nav">
@@ -27,8 +66,8 @@
                     <a href="#product" class="header__nav-a">Solutions</a>
                 </div>
                 <div class="header__nav-reg">
-                    <a href="#" class="header__nav-ar">Sing in</a>
-                    <a href="#" class="header__nav-ar">Start Trial</a>
+                    <a href="#modal1" class="header__nav-ar modal-trigger">Sing in</a>
+                    <a href="#modal2" class="header__nav-ar  ">Start Trial</a>
                 </div>
             </div>
         </div>
@@ -40,7 +79,7 @@
                 <h1 class="about__text-h1">Be aware, Manage well.</h1>
                 <h3 class="about__text-h3">Everyone experiences stress in different ways.
                     Let Alivio guide you, in a personalized journal experience, to overcome your stress.</h3>
-                <button class="about__text-button">Find Your Way</button>
+                <button href="#modal2" class="about__text-button modal-trigger">Find Your Way</button>
             </div>
     </section>
 
@@ -87,7 +126,7 @@
                 <div class="story__flex-item">
                     <h1 class="story__flex-item-h1">Let's hear about Kayla's success story</h1>
                     <p class="story__flex-item-p">See how well Alivio works in a real customer’s life.</p>
-                    <button class="about__text-button">Let's get started</button>
+                    <button href="#modal2" class="about__text-button modal-trigger">Let's get started</button>
                 </div>
                 <div class='embed-container'>
                     <iframe src='https://www.youtube.com/embed//1A30qZF1vcQ'
@@ -99,12 +138,34 @@
 
     <section class="product" id="product">
         <div class="container">
-
+            <div class="story__flex">
+                <div class='product__img'>
+                    <img src="img/product_1.png" alt="product" class="product__img-max">
+                    <img src="img/product_min.png" alt="product" class="product__img-min">
+                </div>
+                <div class="story__flex-item">
+                    <h3 class="hiw__h3">Our product</h3>
+                    <h1 class="story__flex-item-h1">You tell us your stress,
+                        We make your diary</h1>
+                    <p class="hiw__grid-item-p">Everyone experiences it, and in different ways.
+                        Let Alivio guide you, in a personalized journal experience, to overcome your stress.</p>
+                    <button href="#modal2" class="about__text-button  modal-trigger">Find Your Way</button>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer></footer>
+    <footer>
+        <div class="container">
+            <a href="#about"><img src="img/logo-w.png" alt="logo-w" class="footer__img"></a>
+            <a href="#about" class="header__nav-a">Why Alivio</a>
+            <a href="#hiw" class="header__nav-a">Community</a>
+            <a href="#story" class="header__nav-a">Pricing</a>
+            <a href="#product" class="header__nav-a">Solutions</a>
+        </div>
+    </footer>
 
+    <script type="text/javascript" src="js/materialize.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
